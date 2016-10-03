@@ -13,19 +13,19 @@ public class Produto {
 
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	private long id;
+	private Long id;
 	private String titulo;
 	private String descricao;
-	private int paginas;
+	private Integer paginas;
 	
 	@ElementCollection
 	private List<Preco> precos;
 
-	public long getId() {
+	public Long getId() {
 		return id;
 	}
 
-	public void setId(long id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 
@@ -37,11 +37,11 @@ public class Produto {
 		this.descricao = descricao;
 	}
 
-	public int getPaginas() {
+	public Integer getPaginas() {
 		return paginas;
 	}
 
-	public void setPaginas(int paginas) {
+	public void setPaginas(Integer paginas) {
 		this.paginas = paginas;
 	}
 
