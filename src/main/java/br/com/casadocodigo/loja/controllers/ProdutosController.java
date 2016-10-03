@@ -20,7 +20,7 @@ import br.com.casadocodigo.loja.models.TipoPreco;
 import br.com.casadocodigo.loja.validacoes.ProdutoValidation;
 
 @Controller
-@RequestMapping("produtos")
+@RequestMapping("/produtos")
 public class ProdutosController {
 	
 	@Autowired
@@ -29,7 +29,6 @@ public class ProdutosController {
 	@InitBinder
 	public void initBinder(WebDataBinder binder){
 		binder.addValidators(new ProdutoValidation());
-		;
 	}
 
 	@RequestMapping("/form")
@@ -51,7 +50,7 @@ public class ProdutosController {
 		
 		redirectAttributes.addFlashAttribute("sucesso", "Produto cadastrado com sucesso!");
 		
-		return new ModelAndView("redirect:produtos");
+		return new ModelAndView("redirect:/produtos");
 	}
 	
 	@RequestMapping(method=RequestMethod.GET)

@@ -3,14 +3,14 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 <%@ taglib uri="http://www.springframework.org/tags" prefix="s" %>
-<!DOCTYPEs>
+<!DOCTYPE>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Livros de Java, Android, iPhone, Ruby, PHP e muito mais - Casa do Código</title>
 </head>
 <body>
-	<form:form action="/casadocodigo/produtos" method="post" commandName="produto">
+	<form:form action="${s:mvcUrl('PC#gravar').build() }" method="post" commandName="produto">
 		<div>
 			<label>Título</label>
 			<input type="text" name="titulo"/>
