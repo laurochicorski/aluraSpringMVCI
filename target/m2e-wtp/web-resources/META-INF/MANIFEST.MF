@@ -1,5 +1,5 @@
 Manifest-Version: 1.0
-Built-By: lauro.chicorski
-Build-Jdk: 1.8.0_31
+Built-By: lauro
+Build-Jdk: 1.8.0_101
 Created-By: Maven Integration for Eclipse
 

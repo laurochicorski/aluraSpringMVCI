@@ -19,13 +19,15 @@ public class Produto {
 	private Long id;
 	private String titulo;
 	private String descricao;
-	private Integer paginas;
+	private int paginas;
 	
 	@ElementCollection
 	private List<Preco> precos;
 	
 	@DateTimeFormat
 	private Calendar dataLancamento;
+	
+	private String sumarioPath;
 
 	public Long getId() {
 		return id;
@@ -43,11 +45,11 @@ public class Produto {
 		this.descricao = descricao;
 	}
 
-	public Integer getPaginas() {
+	public int getPaginas() {
 		return paginas;
 	}
 
-	public void setPaginas(Integer paginas) {
+	public void setPaginas(int paginas) {
 		this.paginas = paginas;
 	}
 
@@ -75,9 +77,18 @@ public class Produto {
 		this.dataLancamento = dataLancamento;
 	}
 
+	public String getSumarioPath() {
+		return sumarioPath;
+	}
+	
+	public void setSumarioPath(String sumarioPath) {
+		this.sumarioPath = sumarioPath;
+	}
+	
 	@Override
 	public String toString() {
 		return "Produto [titulo=" + titulo + ", descricao=" + descricao + ", paginas=" + paginas + "]";
 	}
+
 
 }
