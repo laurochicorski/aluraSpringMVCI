@@ -7,7 +7,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Livros de Java, Android, iPhone, Ruby, PHP e muito mais - Casa do Código</title>
+<title>Livros de Java 8, Android, iPhone, Ruby, PHP e muito mais - Casa do Código</title>
 </head>
 <body>
 	<form:form action="${s:mvcUrl('PC#gravar').build() }" method="post" commandName="produto"
@@ -27,7 +27,7 @@
 			<form:input path="paginas"/>
 			<form:errors path="paginas"/>
 		</div>
-		<div>
+		<div> 
 		    <label>Data de Lançamento</label>
 		    <form:input path="dataLancamento" />
 		    <form:errors path="dataLancamento" />
