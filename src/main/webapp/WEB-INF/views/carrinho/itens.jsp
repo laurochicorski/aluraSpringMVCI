@@ -103,7 +103,7 @@
 		        </tr>
 		      </thead>
 		      <tbody>
-		      	<c:forEach items="{carrinhoCompras.itens }" var="item">
+		      	<c:forEach items="${carrinhoCompras.itens }" var="item">
 			      <tr>
 			          <td class="cart-img-col"><img src="http://cdn.shopify.com/s/files/1/0155/7645/products/css-eficiente-featured_large.png?v=1435245145" width="71px" height="100px"/></td>
 			          <td class="item-title">${item.produto.titulo }</td>
@@ -114,8 +114,8 @@
 			          </td>
 			          <td class="numeric-cell">${carrinhoCompras.getTotal(item) }</td>
 			          <td class="remove-item">
-			          	<form action="" method="post">
-			          		<input type="image" src="${contextPath }resources/imagens/excluir.png" alt="Excluir" title="Excluir"/>
+			          	<form action="${s:mvcUrl('CCC#remover').arg(0,item.produto.id) }" method="post">
+			          		<input type="image" src="${contextPath }resources/imagens/excluir.png" alt=" " title="Excluir"/>
 			          	</form>
 			          </td>
 			      </tr>
@@ -123,7 +123,11 @@
 		      </tbody>
 			      <tfoot>
 			        <tr>
-			          <td colspan="3"><input type="submit" class="checkout" name="checkout" value="Finalizar compra" /></td>
+			          <td colspan="3">
+			          	<form action="${s:mvcUrl('PC#finalizar').arg(0,item.produto.id).arg(1,item.tipoPreco).build() }" method="post">
+				          	<input type="submit" class="checkout" name="checkout" value="Finalizar compra" />
+			          	</form>	
+			          </td>
 			          <td class="numeric-cell">${carrinhoCompras.total  }</td><td></td>
 			        </tr>
 			      </tfoot>
